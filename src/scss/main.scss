@@ -1,0 +1,22 @@
+@import './utils/variables';
+@import './utils/mixins';
+@import './top-bar';
+@import './hero';
+
+
+*, 
+*::after, 
+*::before  {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  height: 100dvh;
+}
