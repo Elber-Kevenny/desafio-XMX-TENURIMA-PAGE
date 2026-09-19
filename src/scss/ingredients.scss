@@ -1,15 +1,25 @@
 .ingredients {
   width: 100%;
+  
   padding: 48px 0;
-  background-color: #ffffff; 
+  background-color: $c-white; 
+
+   @include on-desktop {
+    padding-inline: 20px;
+    }
+
+    @include large-desktop {
+     @include content-padding-inline;
+    }
 
   &__container {
     width: 100%;
-    max-width: 540px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+   
+   
+    
   }
 
   &__header {
@@ -18,24 +28,42 @@
   }
 
   &__tag {
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    color: #d32f2f;
+    font-family: $f-mont;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 8%;
+    text-align: center;
     text-transform: uppercase;
+    color: $c-text-secondary;
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
   }
 
   &__title {
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 1.2;
-    color: #1a1a1a;
+    font-family: $f-mont;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: $c-text-primary;
+    @include on-desktop {
+      font-size: 36px;
+    }
 
-    span {
-      color: #d32f2f;
+    &-span {
+      font-family: $f-mont;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 130%;
+      letter-spacing: 0%;
+      text-align: center;
       display: block;
+      color: $c-text-secondary; 
+       @include on-desktop {
+      font-size: 36px;
+    }
     }
   }
 
@@ -45,6 +73,19 @@
     flex-direction: column;
     gap: 48px; 
     width: 100%;
+    align-items: center;
+    @include on-desktop {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: clamp(22px, 2vw, 32px); 
+  
+      row-gap: clamp(78px, 6vw, 98px);
+    }
+
+    @include large-desktop {
+      column-gap: 32px;
+      row-gap: 98px;
+    }
   }
 
  
@@ -103,7 +144,8 @@
     &-content {
       position: relative;
       z-index: 1;
-      width: 100%;
+      width: 351px;
+      height: 305px;
       margin-top: -50px; 
       padding: 80px 40px 40px; 
       
@@ -112,6 +154,12 @@
       border-radius: 20px;
       text-align: center;
       overflow: hidden;
+
+      @include on-desktop {
+        width: 385px;
+        height: 315px;
+        
+      }
 
       &::after {
     content: '';
@@ -134,16 +182,38 @@
     }
 
     &-title {
+      font-family: $f-mont;
+      font-weight: 600;
       font-size: 20px;
-      font-weight: 700;
-      color: #d32f2f;
+      line-height: 130%;
+      letter-spacing: 0%;
       margin-bottom: 12px;
+      color: $c-ingredients-title;
     }
 
     &-text {
-      font-size: 14px;
-      line-height: 1.5;
-      color: #555555;
+      font-family: $f-mont;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 130%;
+      letter-spacing: 0%;
+      color: $c-gray-dark;
+     
+    }
+  }
+  &__button {
+    width: 396px;
+   
+
+    &-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+       @include on-desktop {
+      grid-column: 2;
+      
+    }
     }
   }
 }

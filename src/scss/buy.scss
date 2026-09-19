@@ -3,6 +3,10 @@
   padding: 32px 0;
   overflow: hidden;
 
+  @include large-desktop {
+    @include content-padding-inline;
+  }
+
   &__container {
     width: 100%;
   }
@@ -33,39 +37,46 @@
     list-style: none;
     width: 100%;
     align-items: center;
+
+    @include on-desktop {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      align-items: end;
+    }
   }
 
-  /* Bloco do Cartão de Produto */
   &__card {
- 
-
     &-item {
-         width: 384px;
-    height: 345.54px;
-    border-radius: 20px;
-    border-width: 1px;
+      width: 384px;
+      height: 345.54px;
+      border-radius: 20px;
 
       display: block;
       background: #fdf6f0;
       border: 1px solid #e2cad0;
-      border-radius: 16px;
       overflow: hidden;
       text-decoration: none;
       color: inherit;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       transition: border-color 0.3s ease;
+
+      @include on-desktop {
+        width: 384px;
+        height: 868px;
+        border-radius: 20px;
+        grid-row: 1;
+      }
     }
 
     &-link {
-      
-
       &:hover {
         border-color: #8c2a36;
       }
     }
 
     &-header {
-      background: #4a0d13;
+      background: #44000c;
       color: #ffffff;
       text-align: center;
       font-size: 14px;
@@ -80,6 +91,9 @@
       gap: 8px;
       border-bottom-width: 1px;
 
+      &--color {
+        background-color: #a93f48;
+      }
     }
 
     &-content {
@@ -87,6 +101,12 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 16px;
       padding: 16px 16px 35px;
+
+      @include on-desktop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
     }
 
     &-product {
@@ -110,11 +130,15 @@
       text-transform: uppercase;
     }
 
-
     &-image {
       width: 172px;
       height: 199px;
       object-fit: contain;
+
+      @include on-desktop {
+        width: 311px;
+        height: 311px;
+      }
     }
 
     &-info {
@@ -194,13 +218,17 @@
     border: 1px solid #e6b800;
     border-radius: 20px;
     cursor: pointer;
-    
 
     &-image {
-     width: 164px;
+      width: 164px;
       height: 53.68px;
-    border-radius: 11.48px;
+      border-radius: 11.48px;
 
+      @include on-desktop {
+        width: 314px;
+        height: 102px;
+        border-radius: 21.98px;
+      }
     }
   }
 
@@ -233,7 +261,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #F4F4F4;
+    background: #f4f4f4;
     border: 1px solid rgba(193, 18, 31, 0.2);
     width: 352px;
     height: 780.24px;
@@ -246,8 +274,6 @@
     border-radius: 20px;
     padding: 24px 16px;
     text-align: center;
-
-    
 
     &-image {
       width: 212.33px;
@@ -274,11 +300,15 @@
     }
 
     &-button {
-     width: 304px;
+      width: 304px;
       height: 65px;
-
-
-
     }
+  }
+}
+.card--heigth {
+  @include on-desktop {
+    width: 384px;
+    height: 904px;
+    grid-column: 2;
   }
 }

@@ -381,6 +381,12 @@
       letter-spacing: 0%;
       color: $c-text-color;
       display: block;
+
+      @include on-desktop {
+        @include on-desktop {
+        font-size: 18px;
+      }
+      }
     }
 
     &-card {
@@ -411,6 +417,9 @@
         width: 422px;
         height: 205px;
 
+        top: 59%;
+        left: 90%;
+        transform: translateX(-50%);
 
       }
     }
@@ -449,6 +458,7 @@
       line-height: 130%;
       letter-spacing: 0%;
       color: $c-text-color;
+      
     }
     &-divider {
       width: 0.8px;

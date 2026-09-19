@@ -10,6 +10,12 @@
   }
 }
 
+@mixin large-desktop {
+  @media (min-width: 1900px) {
+    @content;
+  }
+}
+
 @mixin content-padding-inline {
   padding-inline: $mobile-padding-inline;
 
@@ -19,6 +25,10 @@
 
   @include on-desktop {
     padding-inline: $desktop-padding-inline;
+  }
+
+  @include large-desktop {
+    padding-inline: 353px;
   }
 }
 
