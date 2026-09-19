@@ -1,0 +1,177 @@
+.why-us {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(180deg, #2A080C 0%, #1A0003 100%);
+  margin-top: 80px;
+  overflow: hidden;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  &__tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #FF4D4D;
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: $c-white;
+  }
+
+  /* Lista de Pills / Cards escuros */
+  &__list {
+    width: 100%;
+    max-width: 355px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 122px;
+  }
+
+  &__item {
+    width: 100%;
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 12px 24px;
+    
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    backdrop-filter: blur(16px);
+
+    background: linear-gradient(
+         270deg, 
+        rgba(108, 45, 57, 0.2) 0%, 
+        rgba(108, 45, 57, 0) 100% 
+       );
+   
+  }
+
+  &__icon-wrapper {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: $c-red-icon;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+
+  &__text {
+   font-family: $f-inter;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0%;
+
+    color: $c-text-color;
+  }
+
+  
+  &__media {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 152px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-bg {
+      position: absolute;
+      top: -20px;
+      width: 100vw;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.15;
+      mix-blend-mode: luminosity;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    &-podium {
+      z-index: 2;
+      width: 462;
+      height: 407.48px;
+      position: absolute;
+      bottom: 0;
+    }
+
+    &-bottle {
+      width: 489.49px;
+      height: 456.68px;
+      z-index: 3;
+      position: relative;
+      bottom: 15px;
+    }
+  }
+
+  
+  &__pill {
+    position: absolute;
+    z-index: 4;
+    pointer-events: none;
+    animation: floatPill 4s ease-in-out infinite;
+
+    &--top {
+      top: 20%;
+      right: 15%;
+      width: 48px;
+      transform: rotate(25deg);
+    }
+
+    &--bottom {
+      bottom: 25%;
+      left: 12%;
+      width: 52px;
+      transform: rotate(-35deg);
+      animation-delay: 2s;
+    }
+  }
+
+  /* Faixa de Garantia Inferior (Ticker Tape) */
+ 
+}
+
+/* Animações Globais */
+@keyframes floatPill {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(8deg);
+  }
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

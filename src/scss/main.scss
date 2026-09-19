@@ -2,6 +2,16 @@
 @import './utils/mixins';
 @import './top-bar';
 @import './hero';
+@import './about';
+@import './utils/utilities';
+@import './ingredients';
+@import './why';
+@import './testimonials';
+@import './freeshp';
+@import './buy';
+@import './faq';
+@import './footer';
+@import './nav';
 
 
 *, 
@@ -11,6 +21,7 @@
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
+  
 }
 
 a {
@@ -19,4 +30,5 @@ a {
 
 body {
   height: 100dvh;
+
 }

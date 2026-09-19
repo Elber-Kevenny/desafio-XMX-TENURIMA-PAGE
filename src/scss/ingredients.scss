@@ -1,0 +1,149 @@
+.ingredients {
+  width: 100%;
+  padding: 48px 0;
+  background-color: #ffffff; 
+
+  &__container {
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__tag {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #d32f2f;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1a1a1a;
+
+    span {
+      color: #d32f2f;
+      display: block;
+    }
+  }
+
+  
+  &__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 48px; 
+    width: 100%;
+  }
+
+ 
+  &__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+   
+    &-icon-wrapper {
+      position: relative;
+      z-index: 2;
+      width: 104px;
+      height: 104px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $c-white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    &::before {
+  content: '';
+    position: absolute;
+    inset: -2.31px; 
+    border-radius: 50%;
+    padding: 2.31px; 
+    background: 
+      linear-gradient($c-white, $c-white) padding-box, 
+      linear-gradient(180deg, #FF2D2D 0%, $c-white 100%) border-box;   
+    border: 2.31px solid transparent;
+    z-index: -1;
+    pointer-events: none;
+  }
+      
+    
+    }
+
+    &-icon {
+      width: 104px;
+      height: 89px;
+      object-fit: contain;
+      border-radius: 50%;
+      position: relative;
+      z-index: 2;
+
+
+
+
+
+
+    }
+
+    &-content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      margin-top: -50px; 
+      padding: 80px 40px 40px; 
+      
+      background-color: #F4F4F4;
+      border-bottom: 2px solid #FF1F1F; 
+      border-radius: 20px;
+      text-align: center;
+      overflow: hidden;
+
+      &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); 
+    
+    width: 231px;
+    height: 60px;
+    
+    background-image: url('/images/vector1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+    
+    z-index: 1; 
+    pointer-events: none;
+  }
+    }
+
+    &-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #d32f2f;
+      margin-bottom: 12px;
+    }
+
+    &-text {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #555555;
+    }
+  }
+}

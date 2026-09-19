@@ -1,0 +1,55 @@
+.button {
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $green-gradient;
+
+    min-height: 65px;
+    border-radius: 50px;
+    border-bottom: 6px solid #116800;
+    gap: 16px;
+    cursor: pointer;
+
+    &__icon {
+      width: 24px;
+      height: 24px
+    }
+
+    &__order {
+      color: $c-text-color;
+      text-transform: uppercase;
+
+      font-family: $f-inter;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 100%;
+      letter-spacing: 0%;
+    }
+}
+
+
+.ticker {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    background-color: #E61C24;
+    padding: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+
+  }
+
+.track {
+      display: inline-block;
+      white-space: nowrap;
+      animation: ticker 15s linear infinite;
+
+     &__span {
+        font-family: Poppins;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 130%;
+        letter-spacing: 0%;
+        text-align: center;
+        color: $c-text-color;
+      }
+    }

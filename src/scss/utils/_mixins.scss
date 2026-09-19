@@ -40,3 +40,7 @@
     --grid-collum-gap: 32px;
   }
 }
+
+@mixin float-animation($duration: 3s, $timing: ease-in-out) {
+  animation: floatPill $duration $timing infinite;
+}

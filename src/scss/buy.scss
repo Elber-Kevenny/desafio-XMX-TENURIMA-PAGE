@@ -1,0 +1,284 @@
+.buy {
+  background-color: $c-white;
+  padding: 32px 0;
+  overflow: hidden;
+
+  &__container {
+    width: 100%;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin: 0 0 4px;
+
+    &-highlight {
+      color: #8c2a36;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 11px;
+    color: #666666;
+    margin: 0 0 24px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    width: 100%;
+    align-items: center;
+  }
+
+  /* Bloco do Cartão de Produto */
+  &__card {
+ 
+
+    &-item {
+         width: 384px;
+    height: 345.54px;
+    border-radius: 20px;
+    border-width: 1px;
+
+      display: block;
+      background: #fdf6f0;
+      border: 1px solid #e2cad0;
+      border-radius: 16px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: border-color 0.3s ease;
+    }
+
+    &-link {
+      
+
+      &:hover {
+        border-color: #8c2a36;
+      }
+    }
+
+    &-header {
+      background: #4a0d13;
+      color: #ffffff;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 8px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      width: 384px;
+      height: 61px;
+      opacity: 1;
+      padding-top: 16px;
+      gap: 8px;
+      border-bottom-width: 1px;
+
+    }
+
+    &-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      padding: 16px 16px 35px;
+    }
+
+    &-product {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    &-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #a32e38;
+      line-height: 1.1;
+    }
+
+    &-subtitle {
+      font-size: 10px;
+      color: #777777;
+      margin-top: 2px;
+      text-transform: uppercase;
+    }
+
+
+    &-image {
+      width: 172px;
+      height: 199px;
+      object-fit: contain;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  /* Elementos de Preço e Benefícios */
+  &__price {
+    margin: 0 0 8px;
+    font-size: 28px;
+    font-weight: 800;
+    color: #8c2a36;
+    line-height: 1;
+
+    &-cents {
+      font-size: 16px;
+      vertical-align: super;
+    }
+
+    &-unit {
+      font-size: 11px;
+      font-weight: 400;
+      color: #555555;
+    }
+  }
+
+  &__benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__benefit-item {
+    font-size: 9px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    &--success {
+      color: #2e7d32;
+
+      &::before {
+        content: "✔";
+      }
+    }
+
+    &--warning {
+      color: #d97706;
+
+      &::before {
+        content: "✔";
+      }
+    }
+
+    &--danger {
+      color: #dc2626;
+
+      &::before {
+        content: "✖";
+      }
+    }
+  }
+
+  &__button {
+    width: 164px;
+    height: 53.68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #e6b800;
+    border-radius: 20px;
+    cursor: pointer;
+    
+
+    &-image {
+     width: 164px;
+      height: 53.68px;
+    border-radius: 11.48px;
+
+    }
+  }
+
+  &__cards-image {
+    width: 80%;
+    margin: 8px auto 4px;
+    display: block;
+    height: auto;
+  }
+
+  &__total {
+    margin: 0;
+    text-align: center;
+    font-size: 10px;
+    color: #555555;
+
+    &-old {
+      color: #888888;
+    }
+
+    &-current {
+      font-weight: 700;
+      color: #8c2a36;
+    }
+  }
+
+  /* Bloco de Garantia */
+  &__guarantee {
+    margin-top: 88px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F4F4F4;
+    border: 1px solid rgba(193, 18, 31, 0.2);
+    width: 352px;
+    height: 780.24px;
+    border-radius: 30px;
+    padding-top: 40px;
+    padding-right: 24px;
+    padding-bottom: 64px;
+    padding-left: 24px;
+
+    border-radius: 20px;
+    padding: 24px 16px;
+    text-align: center;
+
+    
+
+    &-image {
+      width: 212.33px;
+      height: 212.33px;
+      object-fit: cover;
+    }
+
+    &-title {
+      font-family: $f-mont;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 130%;
+      letter-spacing: 0%;
+      color: $c-text-primary;
+    }
+
+    &-text {
+      font-family: $f-mont;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 130%;
+      letter-spacing: 0%;
+      color: $c-gray-dark;
+    }
+
+    &-button {
+     width: 304px;
+      height: 65px;
+
+
+
+    }
+  }
+}

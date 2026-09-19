@@ -1,10 +1,10 @@
 .top-bar {
   &_header {
     width: 100%;
-    height: 64px;
+    height: 94px;
 
     @include on-tablets {
-      height: 94px;
+      height: 106px;
     }
   }
 }
