@@ -1,5 +1,6 @@
-[LINK_VÍDEO_PARTE_1](https://www.loom.com/share/e883c2591fed40d783c5c002bc67c082)
-[LINK_VÍDEO_PARTE_2](https://www.loom.com/share/764e9457acb9461282301018042bd2f9)
+[LINK_VÍDEO_PARTE_1](https://www.loom.com/share/e604b96622d64a43a60634649dd051be)
+
+[LINK_VÍDEO_PARTE_2](https://www.loom.com/share/efcd86e30dbd449bbe469a4baa69a080)
 
 
 
